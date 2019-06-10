@@ -8,9 +8,14 @@ namespace MVCfromScratch.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult Index()
+        public ViewResult Index1()
         {
             return View();
+        }
+
+        public string Index()
+        {
+            return "Hello World!";
         }
     }
 }
