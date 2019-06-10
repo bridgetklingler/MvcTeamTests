@@ -1,6 +1,7 @@
 ﻿using System;
 using MVCfromScratch.Controllers;
 using Xunit;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace MVCfromScratch.Tests
@@ -16,5 +17,15 @@ namespace MVCfromScratch.Tests
 
             Assert.Equal("Hello World!", result);
         }
+        [Fact]
+        public void Index_Returns_A_View()
+        {
+            var underTest = new HomeController();
+
+            var result = underTest.Index1();
+
+            Assert.IsType<ViewResult>(result);
+        }
+
     }
 }
